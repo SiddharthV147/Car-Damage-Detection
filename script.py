@@ -2,13 +2,10 @@ import os
 import shutil
 import pandas as pd
 
-# Path to the directory containing images
 image_directory = 'C:\\Users\\vedant golegaonkar\\Downloads\\DAMAGES.v5-updated-car-damage-dataset.tensorflow-20240411T061959Z-001\\DAMAGES.v5-updated-car-damage-dataset.tensorflow\\valid'
 
-# Path to the CSV file containing annotations
 annotations_file = 'C:\\Users\\vedant golegaonkar\\Downloads\\DAMAGES.v5-updated-car-damage-dataset.tensorflow-20240411T061959Z-001\\DAMAGES.v5-updated-car-damage-dataset.tensorflow\\valid\\_annotations.csv'
 
-# Create output directories if they don't exist
 crack_and_hole = os.path.join(image_directory, 'crack_and_hole')
 medium_deformation = os.path.join(image_directory, 'medium_deformation')
 severe_deformation = os.path.join(image_directory, 'severe_deformation')
@@ -26,7 +23,6 @@ os.makedirs(slight_deformation, exist_ok=True)
 os.makedirs(slight_scratch, exist_ok=True)
 
 
-# Load annotations from CSV file
 annotations_df = pd.read_csv(annotations_file)
 
 # Loop through annotations and move images to corresponding directories
